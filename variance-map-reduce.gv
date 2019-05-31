@@ -1,0 +1,66 @@
+digraph G {
+rankdir=LR;
+
+subgraph cluster_1 {
+  label="Node 1"
+  node1 -> temp1 [label="map"]
+}
+
+subgraph cluster_2 {
+  label="Node 2"
+  node2 -> temp2 [label="map"]
+}
+
+temp1 -> trainer [label="reduce"]
+temp2 -> trainer [label="reduce"]
+trainer -> model
+
+node1 [shape=plaintext label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD>KEY</TD><TD>VAL</TD></TR>
+  <TR><TD BGCOLOR="red">L1</TD><TD>1</TD></TR>
+  <TR><TD BGCOLOR="red">L1</TD><TD>2</TD></TR>
+  <TR><TD BGCOLOR="red">L1</TD><TD>3</TD></TR>
+  <TR><TD BGCOLOR="blue">L2</TD><TD>4</TD></TR>
+</TABLE>>];
+
+
+node2 [shape=plaintext label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD>Key</TD><TD>Val</TD></TR>
+  <TR><TD BGCOLOR="red">L1</TD><TD>1</TD></TR>
+  <TR><TD BGCOLOR="blue">L2</TD><TD>2</TD></TR>
+  <TR><TD BGCOLOR="blue">L2</TD><TD>3</TD></TR>
+  <TR><TD BGCOLOR="blue">L2</TD><TD>4</TD></TR>
+</TABLE>>];
+
+temp1 [shape=plaintext label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD>Key</TD><TD>Sum</TD><TD>Amount</TD></TR>
+  <TR><TD BGCOLOR="red" >L1</TD><TD>(x<sub>i</sub> - agv<sub>1</sub>)<sup>2</sup></TD><TD>3</TD></TR>
+  <TR><TD BGCOLOR="blue">L2</TD><TD>(x<sub>j</sub> - agv<sub>2</sub>)<sup>2</sup></TD><TD>1</TD></TR>
+</TABLE>>];
+
+
+temp2 [shape=plaintext label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD>Key</TD><TD>Sum</TD><TD>Amount</TD></TR>
+  <TR><TD BGCOLOR="red">L1</TD><TD>(x_i - avg_1)^2</TD><TD>1</TD></TR>
+  <TR><TD BGCOLOR="blue">L2</TD><TD>(x_i - avg_2)^2</TD><TD>4</TD></TR>
+</TABLE>>];
+
+trainer [shape=plaintext label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD>Key</TD><TD>sum</TD><TD>amount</TD><TD>Average</TD></TR>
+  <TR><TD BGCOLOR="red">L1</TD><TD>7</TD><TD>4</TD><TD>7/4</TD></TR>
+  <TR><TD BGCOLOR="blue">L2</TD><TD>13</TD><TD>4</TD><TD>13/4</TD></TR>
+</TABLE>>];
+
+model [shape=plaintext label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+  <TR><TD>Key</TD><TD>Average</TD></TR>
+  <TR><TD BGCOLOR="red">L1</TD><TD>7/4</TD></TR>
+  <TR><TD BGCOLOR="blue">L2</TD><TD>13/4</TD></TR>
+</TABLE>>];
+
+}
