@@ -51,16 +51,17 @@ temp2 [shape=plaintext label=<
 
 trainer [shape=plaintext label=<
 <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
-  <TR><TD>Label</TD><TD>sum</TD><TD>amount</TD><TD>Average</TD></TR>
-  <TR><TD BGCOLOR="red">L1</TD><TD>7</TD><TD>4</TD><TD>7/4</TD></TR>
-  <TR><TD BGCOLOR="blue">L2</TD><TD>13</TD><TD>4</TD><TD>13/4</TD></TR>
+  <TR><TD>Label</TD><TD>sum</TD><TD>amount</TD><TD>Variance</TD></TR>
+  <TR><TD BGCOLOR="red">L1</TD><TD>s_1</TD><TD>4</TD><TD>v_1</TD></TR>
+  <TR><TD BGCOLOR="blue">L2</TD><TD>s_2</TD><TD>4</TD><TD>v_2</TD></TR>
 </TABLE>>];
 
 model [shape=plaintext label=<
 <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
-  <TR><TD>Label</TD><TD>Average</TD></TR>
-  <TR><TD BGCOLOR="red">L1</TD><TD>7/4</TD></TR>
-  <TR><TD BGCOLOR="blue">L2</TD><TD>13/4</TD></TR>
+  <TR><TD colspan="3">Model</TD></TR>
+  <TR><TD>Label</TD><TD>Average</TD><TD>Variance</TD></TR>
+  <TR><TD BGCOLOR="red">L1</TD><TD>a_1</TD><TD>v_1</TD></TR>
+  <TR><TD BGCOLOR="blue">L2</TD><TD>a_2</TD><TD>v_2</TD></TR>
 </TABLE>>];
 
 }
