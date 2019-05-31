@@ -17,7 +17,7 @@ trainer -> model
 
 node1 [shape=plaintext label=<
 <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
-  <TR><TD>KEY</TD><TD>VAL</TD></TR>
+  <TR><TD>Label</TD><TD>Feature</TD></TR>
   <TR><TD BGCOLOR="red">L1</TD><TD>1</TD></TR>
   <TR><TD BGCOLOR="red">L1</TD><TD>2</TD></TR>
   <TR><TD BGCOLOR="red">L1</TD><TD>3</TD></TR>
@@ -27,7 +27,7 @@ node1 [shape=plaintext label=<
 
 node2 [shape=plaintext label=<
 <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
-  <TR><TD>Key</TD><TD>Val</TD></TR>
+  <TR><TD>Label</TD><TD>Feature</TD></TR>
   <TR><TD BGCOLOR="red">L1</TD><TD>1</TD></TR>
   <TR><TD BGCOLOR="blue">L2</TD><TD>2</TD></TR>
   <TR><TD BGCOLOR="blue">L2</TD><TD>3</TD></TR>
@@ -36,7 +36,7 @@ node2 [shape=plaintext label=<
 
 temp1 [shape=plaintext label=<
 <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
-  <TR><TD>Key</TD><TD>Sum</TD><TD>Amount</TD></TR>
+  <TR><TD>Label</TD><TD>Sum</TD><TD>Amount</TD></TR>
   <TR><TD BGCOLOR="red" >L1</TD><TD>(x<sub>i</sub> - agv<sub>1</sub>)<sup>2</sup></TD><TD>3</TD></TR>
   <TR><TD BGCOLOR="blue">L2</TD><TD>(x<sub>j</sub> - agv<sub>2</sub>)<sup>2</sup></TD><TD>1</TD></TR>
 </TABLE>>];
@@ -44,21 +44,21 @@ temp1 [shape=plaintext label=<
 
 temp2 [shape=plaintext label=<
 <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
-  <TR><TD>Key</TD><TD>Sum</TD><TD>Amount</TD></TR>
+  <TR><TD>Label</TD><TD>Sum</TD><TD>Amount</TD></TR>
   <TR><TD BGCOLOR="red">L1</TD><TD>(x_i - avg_1)^2</TD><TD>1</TD></TR>
   <TR><TD BGCOLOR="blue">L2</TD><TD>(x_i - avg_2)^2</TD><TD>4</TD></TR>
 </TABLE>>];
 
 trainer [shape=plaintext label=<
 <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
-  <TR><TD>Key</TD><TD>sum</TD><TD>amount</TD><TD>Average</TD></TR>
+  <TR><TD>Label</TD><TD>sum</TD><TD>amount</TD><TD>Average</TD></TR>
   <TR><TD BGCOLOR="red">L1</TD><TD>7</TD><TD>4</TD><TD>7/4</TD></TR>
   <TR><TD BGCOLOR="blue">L2</TD><TD>13</TD><TD>4</TD><TD>13/4</TD></TR>
 </TABLE>>];
 
 model [shape=plaintext label=<
 <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
-  <TR><TD>Key</TD><TD>Average</TD></TR>
+  <TR><TD>Label</TD><TD>Average</TD></TR>
   <TR><TD BGCOLOR="red">L1</TD><TD>7/4</TD></TR>
   <TR><TD BGCOLOR="blue">L2</TD><TD>13/4</TD></TR>
 </TABLE>>];
