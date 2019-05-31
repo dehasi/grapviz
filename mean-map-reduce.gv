@@ -27,7 +27,7 @@ node1 [shape=plaintext label=<
 
 node2 [shape=plaintext label=<
 <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
-  <TR><TD>KEY</TD><TD>VAL</TD></TR>
+  <TR><TD>Key</TD><TD>Val</TD></TR>
   <TR><TD BGCOLOR="red">L1</TD><TD>1</TD></TR>
   <TR><TD BGCOLOR="blue">L2</TD><TD>2</TD></TR>
   <TR><TD BGCOLOR="blue">L2</TD><TD>3</TD></TR>
